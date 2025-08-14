@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Host
+Host: https://your-portfolio-site.com
+
+# Sitemaps
+Sitemap: https://your-portfolio-site.com/sitemap.xml
