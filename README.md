@@ -1,6 +1,10 @@
-# Portfolio - React TypeScript
+# Asmit Swain | Portfolio
 
-A modern, responsive portfolio website built with React, TypeScript, and Tailwind CSS.
+**Welcome to my personal portfolio repository!**  
+This project showcases my skills, projects, and achievements as a **Full-stack developer & Unity Game creator**.  
+The portfolio is fully responsive, has a a clean UI/UX design, built with **React, TypeScript, and Tailwind CSS**, and deployed on **Netlify**.
+
+🔗 **Live Portfolio:** [View Here](https://portfolio-asmit-swain.netlify.app/)
 
 ## 🚀 Features
 
@@ -21,12 +25,13 @@ A modern, responsive portfolio website built with React, TypeScript, and Tailwin
 - **Icons**: Lucide React
 - **Linting**: ESLint + Prettier
 - **Testing**: Jest + React Testing Library
+- **Deployment**: Netlify
 
 ## 📁 Project Structure
 
 ```
 src/
-├── components/          # Reusable UI components
+├── components/         # Reusable UI components
 │   ├── ui/             # Basic UI components
 │   ├── layout/         # Layout components
 │   └── sections/       # Page sections
@@ -51,7 +56,7 @@ src/
 
 1. Clone the repository:
 ```bash
-git clone <repository-url>
+git clone https://github.com/AsmitSwain27/Portfolio-Asmit_Swain.git
 cd portfolio-react-typescript
 ```
 
@@ -138,11 +143,25 @@ The build artifacts will be stored in the `dist/` directory.
 
 ## 🤝 Contributing
 
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add some amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
+Contributions are welcome! To contribute:
+
+- Fork this repo
+- Create a new branch:
+```
+bash
+git checkout -b feature-name
+``` 
+- Commit your changes:
+```
+bash
+git commit -m "Add some feature"
+```
+- Push to your branch:
+```
+bash
+git push origin feature-name
+```
+- Open a Pull Request!
 
 ## 📝 License
 
@@ -150,10 +169,11 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 👨‍💻 Author
 
-**Your Name**
-- Website: [yourwebsite.com](https://yourwebsite.com)
-- GitHub: [@yourusername](https://github.com/yourusername)
-- LinkedIn: [Your LinkedIn](https://linkedin.com/in/yourprofile)
+**ASMIT SWAIN**
+- GitHub: [@AsmitSwain27](https://github.com/AsmitSwain27)
+- LinkedIn: [Asmit Swain](https://linkedin.com/in/asmit-swain27a15/)
+- Portfolio Website: [portfolio-asmit-swain.com](https://portfolio-asmit-swain.netlify.app/)
+- Email: [@asmitswain](swain.asmit2006@gmail.com)  
 
 ## 🙏 Acknowledgments
 
