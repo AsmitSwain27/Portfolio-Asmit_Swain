@@ -4,7 +4,7 @@ import { Mail, Github, Linkedin, Download } from 'lucide-react';
 import { useNavigation } from '../../contexts/NavigationContext';
 import { Section } from '../ui/Section';
 import { portfolioData } from '../../data/portfolio.data';
-import profileImage from '../../assets/images/ProfileImage.jpg';
+import profileImage from '@assets/images/ProfileImage.jpg';
 
 const ProfileImage: React.FC<{ src: string; alt: string }> = ({ src, alt }) => (
   <motion.div
