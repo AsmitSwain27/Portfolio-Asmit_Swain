@@ -23,7 +23,8 @@
       "@types/*": ["src/types/*"],
       "@data/*": ["src/data/*"],
       "@styles/*": ["src/styles/*"],
-      "@utils/*": ["src/utils/*"]
+      "@utils/": ["src/utils/"],
+      "@assets/": ["src/assets/"]
     }
   },
   "include": [

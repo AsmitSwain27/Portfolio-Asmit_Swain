@@ -4,6 +4,7 @@ import { Mail, Github, Linkedin, Download } from 'lucide-react';
 import { useNavigation } from '../../contexts/NavigationContext';
 import { Section } from '../ui/Section';
 import { portfolioData } from '../../data/portfolio.data';
+import profileImage from '../../assets/images/ProfileImage.jpg';
 
 const ProfileImage: React.FC<{ src: string; alt: string }> = ({ src, alt }) => (
   <motion.div
@@ -83,7 +84,7 @@ const ActionButtons: React.FC<{ onContactClick: () => void }> = ({ onContactClic
       Contact Me
     </button>
     <a
-      href="/Resume_AsmitSwain_L.pdf"
+      href="/src/assets/Resume.pdf"
       download="Resume-Asmit-Swain.pdf"
       className="bg-white dark:bg-slate-700 text-gray-800 dark:text-slate-200 font-bold py-3 px-6 rounded-lg hover:bg-gray-200 dark:hover:bg-slate-600 transition duration-300 inline-flex items-center justify-center"
     >
@@ -123,7 +124,7 @@ const Hero: React.FC = () => {
         </motion.div>
 
         <ProfileImage
-          src={portfolioData.profileImage}
+          src={profileImage}
           alt={portfolioData.name}
         />
       </div>
