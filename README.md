@@ -1,6 +1,6 @@
-# Asmit Swain | Portfolio
+# <p align="center">Asmit Swain | Portfolio</p>
 
-**Welcome to my personal portfolio repository!**  
+**<p align="center">Welcome to my personal portfolio repository!</p>**  
 This project showcases my skills, projects, and achievements as a **Full-stack developer & Unity Game creator**.  
 The portfolio is fully responsive, has a a clean UI/UX design, built with **React, TypeScript, and Tailwind CSS**, and deployed on **Netlify**.
 
