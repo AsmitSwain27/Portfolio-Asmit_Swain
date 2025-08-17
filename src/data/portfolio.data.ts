@@ -40,7 +40,7 @@ export const portfolioData: PortfolioData = {
     {
       company: "BIPROS",
       role: "Game Developer Intern",
-      duration: "June 2025 - Aug 2025",
+      duration: "June 2025 - Present",
       description: [
         "Developed interactive game mechanics using Unity Engine and C#",
         "Collaborated with design team to implement UI/UX improvements",
