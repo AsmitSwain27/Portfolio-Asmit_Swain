@@ -147,18 +147,15 @@ Contributions are welcome! To contribute:
 
 - Fork this repo
 - Create a new branch:
-```
-bash
+```bash
 git checkout -b feature-name
 ``` 
 - Commit your changes:
-```
-bash
+```bash
 git commit -m "Add some feature"
 ```
 - Push to your branch:
-```
-bash
+```bash
 git push origin feature-name
 ```
 - Open a Pull Request!
