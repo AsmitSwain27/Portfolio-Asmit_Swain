@@ -57,7 +57,7 @@ src/
 1. Clone the repository:
 ```bash
 git clone https://github.com/AsmitSwain27/Portfolio-Asmit_Swain.git
-cd portfolio-react-typescript
+cd portfolio
 ```
 
 2. Install dependencies:
