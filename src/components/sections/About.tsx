@@ -32,7 +32,7 @@ const About: React.FC = () => {
             <ul className="list-disc list-inside">
               <li><strong>Full-Stack:</strong> Node.js and Express.</li>
               <li><strong>Databases:</strong> MongoDB and MySQL.</li>
-              <li><strong>OOP:</strong> Java and Python.</li>
+              <li><strong>OOP:</strong> Java, C and Python.</li>
               <li><strong>Game Dev:</strong> C# in Unity Engine.</li>
             </ul>
           </AboutCard>

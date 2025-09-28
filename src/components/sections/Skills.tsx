@@ -1,38 +1,38 @@
-import React, { useEffect } from 'react';
-import { motion, useAnimation } from 'framer-motion';
+import React from 'react';
+import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { Section } from '../ui/Section';
 import { SectionTitle } from '../ui/SectionTitle';
 import { portfolioData } from '../../data/portfolio.data';
 import { Skill } from '../../types/portfolio.types';
 
-const SkillBar: React.FC<{ skill: Skill }> = ({ skill }) => {
-  const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.5 });
-  const controls = useAnimation();
-
-  useEffect(() => {
-    if (inView) {
-      controls.start({ 
-        width: `${skill.level}%`, 
-        transition: { duration: 1, ease: "easeOut" } 
-      });
-    }
-  }, [controls, inView, skill.level]);
+const SkillCard: React.FC<{ skill: Skill; index: number }> = ({ skill, index }) => {
+  const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.1 });
 
   return (
-    <div className="mb-4">
-      <div className="flex justify-between items-center mb-1">
-        <span className="font-medium text-gray-700 dark:text-slate-200">{skill.name}</span>
-        <span className="text-sm font-medium text-indigo-600 dark:text-indigo-400">{skill.level}%</span>
-      </div>
-      <div ref={ref} className="w-full bg-gray-200 dark:bg-slate-700 rounded-full h-2.5">
-        <motion.div
-          className="bg-indigo-600 dark:bg-indigo-500 h-2.5 rounded-full"
-          initial={{ width: "0%" }}
-          animate={controls}
+    <motion.div
+      ref={ref}
+      className="flex items-center space-x-3 p-4 bg-white dark:bg-slate-800 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300"
+      initial={{ opacity: 0, y: 20 }}
+      animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+      transition={{ duration: 0.5, delay: index * 0.1 }}
+      whileHover={{ scale: 1.02 }}
+    >
+      {skill.icon && (
+        <img 
+          src={skill.icon} 
+          alt={`${skill.name} icon`}
+          className="w-8 h-8 object-contain"
+          onError={(e) => {
+            // Fallback if icon fails to load
+            e.currentTarget.style.display = 'none';
+          }}
         />
-      </div>
-    </div>
+      )}
+      <span className="font-medium text-gray-700 dark:text-slate-200">
+        {skill.name}
+      </span>
+    </motion.div>
   );
 };
 
@@ -40,13 +40,13 @@ const SkillCategory: React.FC<{
   category: string; 
   skills: Skill[] 
 }> = ({ category, skills }) => (
-  <div>
-    <h3 className="text-2xl font-semibold text-gray-800 dark:text-slate-100 mb-4 border-b-2 border-gray-200 dark:border-slate-700 pb-2">
+  <div className="mb-8">
+    <h3 className="text-xl font-semibold text-gray-800 dark:text-slate-100 mb-4 border-b-2 border-indigo-500 dark:border-indigo-400 pb-2 inline-block">
       {category}
     </h3>
-    <div>
-      {skills.map(skill => (
-        <SkillBar key={skill.name} skill={skill} />
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+      {skills.map((skill, index) => (
+        <SkillCard key={skill.name} skill={skill} index={index} />
       ))}
     </div>
   </div>
@@ -58,7 +58,7 @@ const Skills: React.FC = () => {
   return (
     <Section id="skills" className="bg-gray-50 dark:bg-slate-900">
       <SectionTitle>My Skills</SectionTitle>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-8 max-w-4xl mx-auto">
+      <div className="max-w-6xl mx-auto">
         {categories.map(category => (
           <SkillCategory 
             key={category} 

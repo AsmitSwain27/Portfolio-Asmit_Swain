@@ -15,8 +15,9 @@ export interface EducationItem {
   type: 'cgpa' | 'percentage';
 }
 
-export interface ExperienceItem {
+export interface Experience {
   company: string;
+  companyUrl?: string; // Add optional company URL
   role: string;
   duration: string;
   description: string[];
@@ -24,8 +25,8 @@ export interface ExperienceItem {
 
 export interface Skill {
   name: string;
-  level: number;
-  category: 'Programming Languages' | 'Frontend Development' | 'Game Development' | 'Hardware' | 'Data & AI';
+  category: string;
+  icon?: string; // Remove level property if it exists
 }
 
 export interface ContactInfo {
@@ -44,7 +45,7 @@ export interface PortfolioData {
   profileImage: string;
   contact: ContactInfo;
   education: EducationItem[];
-  experience: ExperienceItem[];
+  experience: Experience[];
   projects: Project[];
   skills: Skill[];
 }
