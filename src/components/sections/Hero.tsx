@@ -5,6 +5,7 @@ import { useNavigation } from '../../contexts/NavigationContext';
 import { Section } from '../ui/Section';
 import { portfolioData } from '../../data/portfolio.data';
 import profileImage from '../../assets/images/ProfileImage.jpg';
+import resumePdf from '../../assets/Resume.pdf';
 
 const ProfileImage: React.FC<{ src: string; alt: string }> = ({ src, alt }) => (
   <motion.div
@@ -84,7 +85,7 @@ const ActionButtons: React.FC<{ onContactClick: () => void }> = ({ onContactClic
       Contact Me
     </button>
     <a
-      href="/src/assets/Resume.pdf"
+      href={resumePdf}
       download="Resume-Asmit-Swain.pdf"
       className="bg-white dark:bg-slate-700 text-gray-800 dark:text-slate-200 font-bold py-3 px-6 rounded-lg hover:bg-gray-200 dark:hover:bg-slate-600 transition duration-300 inline-flex items-center justify-center"
     >
