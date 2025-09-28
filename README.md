@@ -57,7 +57,7 @@ src/
 1. Clone the repository:
 ```bash
 git clone https://github.com/AsmitSwain27/Portfolio-Asmit_Swain.git
-cd portfolio-react-typescript
+cd portfolio
 ```
 
 2. Install dependencies:
@@ -147,18 +147,15 @@ Contributions are welcome! To contribute:
 
 - Fork this repo
 - Create a new branch:
-```
-bash
+```bash
 git checkout -b feature-name
 ``` 
 - Commit your changes:
-```
-bash
+```bash
 git commit -m "Add some feature"
 ```
 - Push to your branch:
-```
-bash
+```bash
 git push origin feature-name
 ```
 - Open a Pull Request!
